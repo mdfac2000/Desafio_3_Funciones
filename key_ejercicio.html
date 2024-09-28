@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafío 3 - Funciones</title>
+    <style>
+      #key {
+        width: 200px;
+        height: 200px;
+        background-color: white;
+        border: 1px solid black;
+      }      
+    </style>
+  </head>
+  <body>
+    <div id="key"></div>
+    
+    <script>
+        let colorActual = 'white';
+        
+        const changeColorByKey = (color) => {
+            document.querySelector('#key').style.backgroundColor = color; // Cambiar el color del div
+        };
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'a') {
+                colorActual = 'pink';
+            } else if (event.key === 's') {
+                colorActual = 'orange';
+            } else if (event.key === 'd') {
+                colorActual = 'lightblue';
+            } else if (event.key === 'q') {
+                colorActual = 'purple';
+            } else if (event.key === 'w') {
+                colorActual = 'gray';
+            } else if (event.key === 'e') {
+                colorActual = 'brown';
+            }
+            changeColorByKey(colorActual);
+        });
+    </script>
+  </body>
+</html>
